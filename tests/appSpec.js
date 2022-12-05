@@ -89,11 +89,11 @@ describe("Building player blocks", function () {
   it("should return a template for the players\
     ", function () {
     let players = initPlayers(TEST_PLAYERS);
+    console.log(players)
     let fragment = buildPlayers(players, 'hero');
-    fragment = fragment.replace(/\s/g, "");
+   fragment = fragment.replace(/\s/g, "");
     let expectedFragment = `
-    <div class="player">
-        <img src="${players[0].image}" alt="">
+    <div class="player"><img src="${players[0].image}">
         <div class="name">${players[0].name}</div>
         <div class="strength">${players[0].strength}</div>
     </div>`;
